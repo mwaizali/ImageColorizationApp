@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Constants } from 'react-native-unimodules';
 import IMuploadpage from './components/IMuploadpage'
 import CameraPage from './components/CameraPage';
+import ImagePage from './components/ImagePage';
 import Info from './components/Info';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -34,7 +35,7 @@ export default function App() {
         {/* <MyStatusBar barStyle='light-content'/> */}
         <NavigationContainer>
           <InStack.Navigator>
-            <InStack.Screen name="ImagePage" component={IMuploadpage}
+            <InStack.Screen name="UploadImage" component={IMuploadpage}
             options={
               {
                 title:"Upload Image",
@@ -47,14 +48,19 @@ export default function App() {
             options={
               {
                 //title:'Add Car'
-                headerShown: false
+
 
               }
             }
             />
-
             <InStack.Screen name="Info" component={Info} options={{
-              title: 'Info'
+              // title: 'Info'
+              headerShown: false
+
+            }}/>
+            <InStack.Screen name="ImagePage" component={ImagePage} options={{
+              // title: 'Info',
+              headerShown: false
             }}/>
 
           </InStack.Navigator>

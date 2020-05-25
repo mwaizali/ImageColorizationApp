@@ -22,13 +22,13 @@ class IMuploadpage extends React.Component {
     var { image} = this.state;
     const {width,height}= Dimensions.get('window')
         // console.log(height)
-    if(image === null){
-     return (
+        if(image == null ){
 
+        return (
          <>   
         <ImageBackground
          source={require('../utils/img-6.jpg')}       
-         style={{flex:1,resizeMode:'cover',justifyContent:'center'}}
+         style={{flex:1,justifyContent:'center'}}
           // blurRadius={2}
 >
           {/* <Header
@@ -111,7 +111,7 @@ class IMuploadpage extends React.Component {
         );
     }
     else{
-      // let {width,height} = this.state;
+      let {width,height} = this.state;
         return (
             <ScrollView style={{ flex: 1,alignSelf: "center" }}>
         
@@ -163,10 +163,14 @@ class IMuploadpage extends React.Component {
         
       });
       if (!result.cancelled) {
-        this.setState({ image: result.uri , width: result.width , height: result.height});
-      }
+
+        // this.setState({ image: result.uri , width: result.width , height: result.height});
+      console.log( "source => ",result.uri)
+
       console.log(result.width)
-      console.log(result.height)
+        console.log('In Result')
+        this.props.navigation.navigate('ImagePage',{image:result.uri,imagewidth:result.width,imageheight: result.height})
+      }
     } catch (E) {
       console.log(E);
     }
