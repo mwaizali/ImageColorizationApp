@@ -5,7 +5,7 @@ export default function Info({}){
     return(
         <View>
             <Text>
-               Info
+               info
             </Text>
         </View>
     )

@@ -30,11 +30,12 @@ export default function App() {
             options={
               {
                 headerShown: false
+
               }
             }
             />
             <InStack.Screen name="Info" component={Info} options={{
-              headerShown: false
+              // headerShown: false
 
             }}/>
             <InStack.Screen name="ImagePage" component={ImagePage} options={{

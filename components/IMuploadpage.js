@@ -52,7 +52,7 @@ class IMuploadpage extends React.Component {
                    <TouchableHighlight
                     style={styles.button }
                     underlayColor={"transparent"}
-                    onPress={()=>this.props.navigation.goBack()}
+                    onPress={()=>this.props.navigation.navigate('CameraPage')}
                    >
                      <Text style={styles.buttontext}>
                         Camera
@@ -63,7 +63,7 @@ class IMuploadpage extends React.Component {
                    <TouchableHighlight
                     style={styles.button }
                     underlayColor={"transparent"}
-                    onPres={()=>(this.props.navigation.navigate('Info'))}
+                    onPress={()=>(this.props.navigation.navigate('Info'))}
                    >
                      <Text style={styles.buttontext}>
                         Info
