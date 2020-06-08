@@ -7,7 +7,7 @@ import {Button} from 'react-native-elements'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {Icon,Header} from 'react-native-elements'
 
-
+import { _pickImages } from "../utils/pickimage";
 
 
 class IMuploadpage extends React.Component {
@@ -31,47 +31,13 @@ class IMuploadpage extends React.Component {
          style={{flex:1,justifyContent:'center'}}
           // blurRadius={2}
 >
-          {/* <Header
-            leftComponent={<Icon name='list' onPress={() => (this.props.navigation.openDrawer())}/>}
-              centerComponent={{ text: 'Image Colorization', style: { color: '#fff' } }}
-              rightComponent={<Icon name='camera' onPress={()=>this.props.navigation.navigate('Camera')}/>}
-            />  */}
-          
+    
           <View style={{flex:1}}> 
             
             <View style={{ marginLeft:20, paddingTop:60}}>
             <Text style={styles.title}>ImageColorization</Text>
               </View>
-              {/* <View style={{backgroundColor:'#0E1B28',paddingBottom:10,paddingTop:10,opacity:0.9 }}>
-                <Text style={styles.title}>ImageColorization</Text>
-              </View> */}
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center',paddingTop:130 }}>            
-                    {/* <Button style= {{
-                    alignContent:'center',
-                    width:200,
-                    backgroundColor:'#0E1B39'
-                  }}
-                    color="#0E1B39"
-                    raised={true}
-                    title="Pick an image" onPress={this._pickImage} />
-            <Button
-                  icon={
-                    <MaterialIcons
-                      name="photo_camera"
-                      size={15}
-                      color="white"
-                    />
-                  }
-                  style= {{ 
-                    width:200,
-                    alignContent: "center",
-                    backgroundColor:'#0E1B39',
-                    paddingTop: 20}}                   
-                    raised={true}
-                    onPress={()=>this.props.navigation.goBack()}
-                    color="#0E1B39"
-                    title="Camera"
-                   /> */}
                    <TouchableHighlight
                     style={styles.button }
                     underlayColor={"transparent"}
