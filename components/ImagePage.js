@@ -25,7 +25,7 @@ export default function ImagePage(props){
           flex: 1,
           paddingTop: 30
         }}>
-        <Image source={{ uri: image }} style={ {width:imagewidth,height: 550, backgroundColor:'#0E1B3', alignItems:'center' }} imageStyle={{ borderRadius: 10 }} resizeMode="contain" />
+        <Image source={{ uri: image }} style={ {width:imagewidth,height: 550, backgroundColor:'white', alignItems:'center' }} imageStyle={{ borderRadius: 10 }} resizeMode="contain" />
           <TouchableHighlight
           style={styles.button }
           underlayColor={"transparent"}
