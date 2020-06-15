@@ -14,6 +14,27 @@ function Info({}){
     return(
         <ScrollView style={styles.page}>
             <Text style= {{ paddingTop:30,fontWeight:"bold",fontSize:25, textAlign:'center',color:"white" }}>
+                About ImageColorization
+            </Text>
+            <View
+            style={{
+            width:"80%",
+            height:"80%",
+            justifyContent: "center",  
+            alignItems:"center",
+            paddingTop: 30,
+            backgroundColor:"white"
+            }}
+            >
+            <Text style= {{ fontWeight:"200",fontSize:20,color:"#0E1B39",textAlign:'center' }}>
+            Bring a new meaning to your 
+                    photos using image colorizer
+                    Through our advance machine
+                    learning software, it can easily
+                    give natural color to your image  
+            </Text>
+            </View>
+            <Text style= {{ paddingTop:30,fontWeight:"bold",fontSize:25, textAlign:'center',color:"white" }}>
                 Our Results
             </Text>
             <View style={{   justifyContent: "space-around",  
