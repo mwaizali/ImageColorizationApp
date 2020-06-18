@@ -27,7 +27,7 @@ function CameraPage({navigation}) {
     return (
       <View style={{ flex: 1 }}>
         <Camera style={{flex: 1, justifyContent: 'space-between' }} type={type}>
-           <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 10, marginBottom: 15, alignItems: 'flex-end' }}>
+           <View style={{ flexDirection: 'row', justifyContent: 'flex-end', paddingHorizontal: 10, marginBottom: 15, alignItems: 'flex-end' }}>
                 <MaterialCommunityIcons name="message-reply"
                     style={{ color: 'white', fontSize: 36 }}
                 ></MaterialCommunityIcons>

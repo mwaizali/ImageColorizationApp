@@ -16,27 +16,60 @@ function Info({}){
             <Text style= {{ paddingTop:30,fontWeight:"bold",fontSize:25, textAlign:'center',color:"white" }}>
                 About ImageColorization
             </Text>
-            <View
-            style={{
-            width:"80%",
-            height:"80%",
-            justifyContent: "center",  
-            alignItems:"center",
-            paddingTop: 30,
-            backgroundColor:"white"
+            <View style={{
+                justifyContent: "center",  
+                alignItems:"center",
+                paddingTop: 10
+            }}>
+              <View
+              style={{
+              padding: 20,
+              backgroundColor:"#f5f5f5",
+              borderBottomWidth:1,
+              borderColor:'#f5deb3',
+              padding:'2%', 
+              width:'75%',
+              marginTop:'10%',
+              borderColor:'#ff00ff',
+              borderWidth:2,
+              borderRadius:10,
+           
             }}
-            >
-            <Text style= {{ fontWeight:"200",fontSize:20,color:"#0E1B39",textAlign:'center' }}>
-            Bring a new meaning to your 
-                    photos using image colorizer
-                    Through our advance machine
-                    learning software, it can easily
-                    give natural color to your image  
-            </Text>
+              >
+              <Text style= {{ fontWeight:"800",fontSize:20,color:"black",textAlign:'center' }}>
+              Bring a new meaning to your 
+                      photos using image colorizer
+                      Through our advance machine
+                      learning software, it can easily
+                      give natural color to your image  
+              </Text>
+              </View>
             </View>
             <Text style= {{ paddingTop:30,fontWeight:"bold",fontSize:25, textAlign:'center',color:"white" }}>
                 Our Results
             </Text>
+            <View style={{   justifyContent: "space-around",  
+            alignItems:"center",
+            flex: 1,
+            flexDirection: 'row',
+            paddingTop: 30
+
+            }}>
+                <Image source={require("../utils/Gallery/test2.jpeg")} style={styles.imgStyle} imageStyle={{ borderRadius: 10 }} resizeMode="contain" />
+                <Image source={require("../utils/Gallery/test2.jpeg")} style={styles.imgStyle} imageStyle={{ borderRadius: 10 }} resizeMode="contain" />
+            
+            </View>
+            <View style={{   justifyContent: "space-around",  
+            alignItems:"center",
+            flex: 1,
+            flexDirection: 'row',
+            paddingTop: 30
+
+            }}>
+                <Image source={require("../utils/Gallery/test2.jpeg")} style={styles.imgStyle} imageStyle={{ borderRadius: 10 }} resizeMode="contain" />
+                <Image source={require("../utils/Gallery/test2.jpeg")} style={styles.imgStyle} imageStyle={{ borderRadius: 10 }} resizeMode="contain" />
+            
+            </View>
             <View style={{   justifyContent: "space-around",  
             alignItems:"center",
             flex: 1,
