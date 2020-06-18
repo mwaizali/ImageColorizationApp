@@ -120,6 +120,26 @@ class IMuploadpage extends React.Component {
       }
     }
   };
+  cloudinaryUpload = (photo) => {
+    // console.log("=>",photo)
+    const data = new FormData()
+    data.append('file', photo.uri)
+    data.append('upload_preset', 'drqzgt17b')
+    data.append("cloud_name", "drqzgt17b")
+    console.log(data)
+    fetch("https://api.cloudinary.com/v1_1/drqzgt17b/image/upload", {
+      method: "post",
+      body: data
+    }).then(res => res.json()).
+      then(data => {
+        // setPhoto(data.secure_url)
+        console.log(data.url)
+        this.props.navigation.navigate('ImagePage',{image:data.url})
+
+      }).catch(err => {
+        Alert.alert("An Error Occured While Uploading")
+      })
+  }
 
   _pickImage = async () => {
     try {
@@ -130,12 +150,17 @@ class IMuploadpage extends React.Component {
       });
       if (!result.cancelled) {
 
-        // this.setState({ image: result.uri , width: result.width , height: result.height});
-      console.log( "source => ",result.uri)
 
-      console.log(result.width)
-        console.log('In Result')
-        this.props.navigation.navigate('ImagePage',{image:result.uri,imagewidth:result.width,imageheight: result.height})
+        // this.setState({ image: result.uri , width: result.width , height: result.height});
+      console.log( "source => ",result)
+        const uri = result.uri;
+        const source = {
+          uri,
+        }
+        this.cloudinaryUpload(source)
+      // console.log(result.width)
+      //   console.log('In Result')
+      
       }
     } catch (E) {
       console.log(E);
